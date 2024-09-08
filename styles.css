@@ -133,6 +133,14 @@ nav {
     margin: 20px;
 }
 
+/* Catálogo */
+
+.jogos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .catalogo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -146,11 +154,26 @@ nav {
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .item img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.item h3 {
+    font-size: 20px;
+    margin-bottom: 10px; 
+}
+
+.item p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 footer {
