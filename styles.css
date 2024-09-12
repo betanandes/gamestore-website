@@ -111,23 +111,32 @@ nav {
 }
 
 /* Carrossel */
-.carousel {
+/* .carousel {
     display: flex;
     overflow: hidden;
     position: relative;
     background-color: #e0b3ff;
-    height: 400px; /* Aumentei a altura do carrossel */
-    z-index: 1; /* Colocar carrossel em um plano inferior ao hambúrguer */
-}
+    height: 400px; 
+    z-index: 1; 
+} */
 
-.carousel-item {
+/* .carousel-item {
     min-width: 100%;
     transition: transform 0.5s ease-in-out;
     background-color: #fff;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-}
+} */
+
+/* .carousel-item img {
+    width: 100%;
+    height: auto; /* Mantém a proporção original da imagem */
+    /* object-fit: cover; Cobre o espaço disponível sem distorcer a imagem
+    /* border-radius: 10px; 
+    
+    }*/
+
 
 .filtro {
     margin: 20px;

@@ -11,22 +11,22 @@ hamburguer.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// Carrossel Automático
-let carouselIndex = 0;
-const carouselItems = document.querySelectorAll('.carousel-item');
+// // Carrossel Automático
+// let carouselIndex = 0;
+// const carouselItems = document.querySelectorAll('.carousel-item');
 
-function showCarouselItem(index) {
-    carouselItems.forEach((item, i) => {
-        item.style.transform = `translateX(${(i - index) * 100}%)`;
-    });
-}
+// function showCarouselItem(index) {
+//     carouselItems.forEach((item, i) => {
+//         item.style.transform = `translateX(${(i - index) * 100}%)`;
+//     });
+// }
 
-function nextCarouselItem() {
-    carouselIndex = (carouselIndex + 1) % carouselItems.length;
-    showCarouselItem(carouselIndex);
-}
+// function nextCarouselItem() {
+//     carouselIndex = (carouselIndex + 1) % carouselItems.length;
+//     showCarouselItem(carouselIndex);
+// }
 
-setInterval(nextCarouselItem, 3000);  // Troca a cada 3 segundos
+// setInterval(nextCarouselItem, 3000);  // Troca a cada 3 segundos
 
-// Inicializar carrossel com a primeira imagem visível
-showCarouselItem(carouselIndex);
+// // Inicializar carrossel com a primeira imagem visível
+// showCarouselItem(carouselIndex);
