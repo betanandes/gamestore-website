@@ -11,22 +11,20 @@ hamburguer.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// // Carrossel Automático
-// let carouselIndex = 0;
-// const carouselItems = document.querySelectorAll('.carousel-item');
+// Função para filtrar os jogos
+document.getElementById('categoria-select').addEventListener('change', function() {
+    const categoriaSelecionada = this.value; // Categoria selecionada no filtro
+    const cards = document.querySelectorAll('.item'); // Todos os cards de jogos
 
-// function showCarouselItem(index) {
-//     carouselItems.forEach((item, i) => {
-//         item.style.transform = `translateX(${(i - index) * 100}%)`;
-//     });
-// }
+    // Loop através de todos os cards para filtrar
+    cards.forEach(function(card) {
+        const categoriaDoJogo = card.getAttribute('data-categoria'); // Categoria do jogo
 
-// function nextCarouselItem() {
-//     carouselIndex = (carouselIndex + 1) % carouselItems.length;
-//     showCarouselItem(carouselIndex);
-// }
-
-// setInterval(nextCarouselItem, 3000);  // Troca a cada 3 segundos
-
-// // Inicializar carrossel com a primeira imagem visível
-// showCarouselItem(carouselIndex);
+        // Mostra ou oculta o card com base na categoria selecionada
+        if (categoriaSelecionada === 'todos' || categoriaDoJogo === categoriaSelecionada) {
+            card.style.display = 'block'; // Mostra o card se a categoria for correspondente ou "todos"
+        } else {
+            card.style.display = 'none'; // Oculta o card se não corresponder à categoria
+        }
+    });
+});

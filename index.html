@@ -17,7 +17,6 @@
         <nav>
             <div class="logo">
                 <img src="assets/gamex-logo-2.png" alt="">
-                <!-- <h1>GameStore</h1> -->
             </div>
             <div class="nav-container">
                 <ul id="nav-links" class="nav-links">
@@ -40,35 +39,20 @@
 
     <!-- Carrossel -->
 
-    <div class="carousel" id="carouselDemo">
+    <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel" data-bs-interval="3000">
 
-        <div class="carousel-inner ">
+        <div class="carousel-inner">
 
             <div class="carousel-item active">
                 <img src="assets/Design sem nome/gta-banner.png" class="w-100" alt="">
-                <div class="carousel-caption">
-                    <h5>Title Slide</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, pariatur dicta. Porro facere quos ipsam cum maxime quo libero, nostrum perferendis excepturi dolore ut deleniti dolorum voluptates culpa quod dolorem?                
-                    </p>     
-                </div>
             </div>
 
             <div class="carousel-item">
                 <img src="assets/Design sem nome/stardew-banner.png" class="w-100" alt="">
-                <div class="carousel-caption">
-                    <h5>Title Slide</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, pariatur dicta. Porro facere quos ipsam cum maxime quo libero, nostrum perferendis excepturi dolore ut deleniti dolorum voluptates culpa quod dolorem?                
-                    </p>     
-                </div>
             </div>
                 
             <div class="carousel-item">
                 <img src="assets/Design sem nome/stone-banner.png" class="w-100" alt="">
-                <div class="carousel-caption">
-                    <h5>Title Slide</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, pariatur dicta. Porro facere quos ipsam cum maxime quo libero, nostrum perferendis excepturi dolore ut deleniti dolorum voluptates culpa quod dolorem?                
-                    </p>     
-                </div>
             </div>
 
         </div>
@@ -78,15 +62,20 @@
         data-bs-target="#carouselDemo" data-bs-slide="prev">
             <span class="carosel-control-prev-icon"></span>
         </button>
+
+        <button class="carousel-control-next" type="button"
+        data-bs-target="#carouselDemo" data-bs-slide="next">
+        <span class="carosel-control-next-icon"></span>
+        </button>
  
 
     </div>
 
     <!-- Filtro -->
 
-    <section class="filtro">
-        <label for="filtro">Filtrar por:</label>
-        <select id="filtro">
+    <section class="filtro-jogos">
+        <label for="categoria-select">Filtrar por:</label>
+        <select id="categoria-select">
             <option value="todos">Todos</option>
             <option value="acao">Ação</option>
             <option value="aventura">Aventura</option>
@@ -97,12 +86,12 @@
     <!-- Catálogo de Jogos -->
 
     <section class="catalogo">
-    <div class="jogos-container">
-        <div class="item">
+    <div id="catalogo-jogos" class="jogos-container">
+        <div class="item" data-categoria="acao">
             <img src="jogo1.jpg" alt="Jogo 1">
             <h3>Jogo 1</h3>
             <p>R$ 59,90</p>
-            <button class="btn comprar">Comprar</button>
+            <button class="btn comprar" onclick="">Comprar</button>
         </div>
         <div class="item">
             <img src="jogo2.jpg" alt="Jogo 2">
@@ -124,7 +113,7 @@
             <p>R$ 79,90</p>
             <button class="btn comprar">Comprar</button>
         </div>
-<!-- 
+
         <div class="item">
             <img src="jogo5.jpg" alt="Jogo 5">
             <h3>Jogo 5</h3>
@@ -138,9 +127,78 @@
             <p>R$ 79,90</p>
             <button class="btn comprar">Comprar</button>
         </div>
-    </div> -->
+
+        <div class="item">
+            <img src="jogo7.jpg" alt="Jogo 7">
+            <h3>Jogo 7</h3>
+            <p >R$ 79,90</p>
+            <button class="btn comprar">Comprar</button>
+        </div>
+
+        <div class="item">
+            <img src="jogo8.jpg" alt="Jogo 8">
+            <h3>Jogo 8</h3>
+            <p>R$ 79,90</p>
+            <button class="btn comprar">Comprar</button>
+        </div>
+        
+        <div class="item">
+            <img src="jogo9.jpg" alt="Jogo 9">
+            <h3>Jogo 9</h3>
+            <p>R$ 79,90</p>
+            <button class="btn comprar">Comprar</button>
+        </div>
+
+        <div class="item">
+            <img src="jogo10.jpg" alt="Jogo 10">
+            <h3>Jogo 10</h3>
+            <p>R$ 79,90</p>
+            <button class="btn comprar">Comprar</button>
+        </div>
+    </div>
         <!-- Adicione os outros jogos aqui -->
     </section>
+
+    <section class="avaliacoes">
+        <h2>Avaliações da Loja</h2>
+    
+        <!-- Área para exibir comentários em colunas -->
+        <div id="comments" class="comments-flex">
+            <div class="comment">
+                <img src="colaborador1.jpg" alt="João Silva" class="comment-avatar">
+                <div class="comment-content">
+                    <p class="comment-text">"Ótima loja, recomendo!"</p>
+                    <p class="comment-author">- João Silva</p>
+                </div>
+            </div>
+            <div class="comment">
+                <img src="colaborador2.jpg" alt="Maria Souza" class="comment-avatar">
+                <div class="comment-content">
+                    <p class="comment-text">"Excelente atendimento e entrega rápida."</p>
+                    <p class="comment-author">- Maria Souza</p>
+                </div>
+            </div>
+            <div class="comment">
+                <img src="colaborador2.jpg" alt="Maria Souza" class="comment-avatar">
+                <div class="comment-content">
+                    <p class="comment-text">"Excelente atendimento e entrega rápida."</p>
+                    <p class="comment-author">- Maria Souza</p>
+                </div>
+            </div>
+            <div class="comment">
+                <img src="colaborador2.jpg" alt="Maria Souza" class="comment-avatar">
+                <div class="comment-content">
+                    <p class="comment-text">"Excelente atendimento e entrega rápida."</p>
+                    <p class="comment-author">- Maria Souza</p>
+                </div>
+            </div>
+
+
+        </div>
+ 
+    </section>
+    
+    
 
     <!-- Footer -->
 
