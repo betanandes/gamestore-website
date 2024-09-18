@@ -172,7 +172,7 @@ nav {
 }
 
 .item button {
-    background-color: #ff66cc;
+    background-color: #ff3399;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -292,11 +292,77 @@ nav {
 
 
 footer {
-    background-color: #6a9eda;
-    color: white;
+    display: flex;
+    background-color: #ff80b3;
+    color: #fff;
     padding: 20px;
     text-align: center;
 }
+
+.footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.fMenuTitle {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.fList {
+    padding: 0;
+    list-style: none;
+}
+
+.fListItem {
+    margin-bottom: 10px;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+.fListItem:hover {
+    color: #660099;
+
+}
+
+.footerRight {
+    flex: 1;   
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fInput {
+    padding: 5px;
+}
+
+.fButton {
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+
+.fIcons {
+    /* display: flex; */
+    
+}
+
+.fIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+}
+
+footer p {
+    margin-top: 10px;
+}
+
 
 
 #dark-mode-toggle {
@@ -337,6 +403,14 @@ body.dark-mode footer {
     background-color: #111;
 }
 
+body.dark-mode .fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+    
+}
+
+
 /* Responsividade */
 @media (max-width: 768px) {
     .nav-actions {
@@ -375,6 +449,23 @@ body.dark-mode footer {
     .comment {
         flex: 1 1 100%; /* Ajusta o comentário para ocupar 100% da largura em telas menores */
         max-width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerLeft {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .footerRight {
+        padding: 20px;
+        width: 90%;
+        align-items: center;
+        background-color: #6a9eda;
     }
 
 }
